@@ -4,6 +4,11 @@
 # Please note that you'll need to change the root_url in the Grafana configuration:
 # root_url = %(protocol)s://%(domain)s:10080/grafana/
 
-  nginxproxy:
+  nginx-proxy:
+    build: docker/blocks/nginx_proxy
+    ports:
+      - "10080:10080"
+
+  linux-nginx-proxy:
     build: docker/blocks/nginx_proxy
     network_mode: host
