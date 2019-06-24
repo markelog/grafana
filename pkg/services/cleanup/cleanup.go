@@ -12,6 +12,7 @@ import (
 	"github.com/grafana/grafana/pkg/infra/serverlock"
 	m "github.com/grafana/grafana/pkg/models"
 	"github.com/grafana/grafana/pkg/registry"
+	"github.com/grafana/grafana/pkg/services/consumer"
 	"github.com/grafana/grafana/pkg/setting"
 )
 
@@ -19,6 +20,7 @@ type CleanUpService struct {
 	log               log.Logger
 	Cfg               *setting.Cfg                  `inject:""`
 	ServerLockService *serverlock.ServerLockService `inject:""`
+	ConsumerService   *consumer.ConsumerService     `inject:""`
 }
 
 func init() {
