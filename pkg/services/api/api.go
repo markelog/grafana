@@ -1,8 +1,6 @@
 package api
 
 import (
-	"github.com/davecgh/go-spew/spew"
-
 	"github.com/grafana/grafana/pkg/registry"
 )
 
@@ -17,7 +15,6 @@ func init() {
 }
 
 func (consumer *APIService) Init() error {
-	spew.Dump(33)
 	return nil
 }
 
